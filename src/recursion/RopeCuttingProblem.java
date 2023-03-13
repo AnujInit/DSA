@@ -15,7 +15,7 @@ public class RopeCuttingProblem {
     static Integer[] memo;
 
     /**
-     *
+     *TC= O(3^n)
      */
     static int maxCutsUsingRecursion(int n, int a, int b, int c){
         //Base Conditions
@@ -31,7 +31,7 @@ public class RopeCuttingProblem {
     }
 
     /**
-     *      
+     * TC= O(n)
      */
     static int maxCutsUsingDP(int n, int a, int b, int c){
 
