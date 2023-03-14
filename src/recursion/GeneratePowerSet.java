@@ -31,7 +31,7 @@ public class GeneratePowerSet {
 
     static void subsetsUsingIterative(String str){
         //Get total possible subsets count
-        long n = powerOf2(str.length());
+        long n = powerOf2(str.length(), 1);
 
         //consider nothing selected
         System.out.print(" ");
@@ -63,13 +63,9 @@ public class GeneratePowerSet {
     /**
      * Power of 2
      */
-     static long powerOf2(int pow) {
-        long res = 1;
-        while (pow != 0){
-            res *= 2;
-            pow--;
-         }
-        return res;
+     static long powerOf2(int pow, int res) {
+         if(pow == 0) return res;
+         return powerOf2(pow-1, res*2);
      }
 
     public static void main(String[] args) {
